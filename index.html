@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATM Simulator</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="atm-container">
+
+    <!-- Header -->
+    <div class="atm-header">
+        <img src="images/logo.png" class="logo" alt="Bank Logo">
+        <h1>ATM Simulator</h1>
+    </div>
+
+
+    <!-- ATM Screen -->
+    <div class="screen">
+
+        <h2>ATM Login</h2>
+
+        <input 
+            type="text" 
+            id="cardNumber" 
+            placeholder="Enter Card Number"
+            maxlength="16"
+        >
+
+        <input 
+            type="password" 
+            id="pin" 
+            placeholder="Enter PIN"
+            maxlength="4"
+        >
+
+        <div class="screen-buttons">
+
+            <button onclick="login()">Login</button>
+
+            <button onclick="clearInput()">Clear</button>
+
+        </div>
+
+
+        <p id="message"></p>
+
+    </div>
+
+
+    <!-- Card Slot -->
+    <div class="card-section">
+
+        <p>Insert Card</p>
+
+        <div class="card-slot"></div>
+
+    </div>
+
+
+    <!-- ATM Operations -->
+
+    <div class="menu">
+
+        <button onclick="withdraw()">Withdraw</button>
+
+        <button onclick="deposit()">Deposit</button>
+
+        <button onclick="checkBalance()">Balance</button>
+
+        <button onclick="miniStatement()">Mini Statement</button>
+
+        <button onclick="changePin()">Change PIN</button>
+
+        <button onclick="exitATM()">Exit</button>
+
+    </div>
+
+
+    <!-- Keypad -->
+
+    <div class="keypad">
+
+        <button onclick="addNumber('1')">1</button>
+        <button onclick="addNumber('2')">2</button>
+        <button onclick="addNumber('3')">3</button>
+
+        <button onclick="addNumber('4')">4</button>
+        <button onclick="addNumber('5')">5</button>
+        <button onclick="addNumber('6')">6</button>
+
+        <button onclick="addNumber('7')">7</button>
+        <button onclick="addNumber('8')">8</button>
+        <button onclick="addNumber('9')">9</button>
+
+        <button onclick="clearInput()">C</button>
+        <button onclick="addNumber('0')">0</button>
+        <button onclick="backspace()">⌫</button>
+
+    </div>
+
+
+    <div class="footer">
+
+        <p>© 2026 ATM Simulator Project</p>
+
+    </div>
+
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
